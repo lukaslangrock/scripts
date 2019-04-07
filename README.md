@@ -1,2 +1,2 @@
 # scripts
-some scripts of mine that I find usefull
+This repo conatins some scripts of mine tht I find useful.
