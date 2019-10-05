@@ -1,6 +1,6 @@
 #!/bin/sh
 # Made to autorun on a PirateBox
-# This script will automatically sort uplaoded files
+# This script will automatically sort uploaded files
 
 cd /opt/piratebox/share/Shared                                                         
 sudo mv *.png Images/                                                                  
