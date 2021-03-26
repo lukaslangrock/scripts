@@ -9,5 +9,5 @@ set -f
 #actual loop
 for i in $(find . -name '*.MXF'); do
   echo "Generating preview: ${i}"
-  ffmpeg -hwaccel auto -y -i "${i}" -vf yadif -pix_fmt yuv420p -c:v libx264 -tune film -preset faster -crf 28 -c:a aac -ac 1 -b:a 64k "${i}_preview.mp4"
+  ffmpeg -hwaccel auto -y -i "${i}" -vf yadif -pix_fmt yuv420p -c:v libx264 -tune film -preset faster -crf 28 -c:a aac -ac 1 -b:a 64k "${i%.*}_preview.mp4"
 done
