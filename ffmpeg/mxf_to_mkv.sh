@@ -7,7 +7,7 @@ IFS='
 set -f
 
 #actual loop
-for i in $(find . -name '*.MXF'); do
-  echo "Generating preview: ${i}"
+for i in $(find . -name '*.MXF' ! -name "*STEREO.MXF"); do
+  echo "Generating mkv: ${i}"
   ffmpeg -i "${i}" -filter_complex "[0:a:0][0:a:1] amerge=inputs=2 [a]" -map 0:v -map "[a]" -c:v copy -c:a flac -ac 2 "${i%.*}.MKV"
 done
