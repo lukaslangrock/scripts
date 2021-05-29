@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Script for sorting all episodes of the same number into a respective folder
 
 # magic that allows folders with dots to not cause issues
