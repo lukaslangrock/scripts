@@ -11,5 +11,5 @@ set -f
 #actual loop
 for i in $(find . -name '*.mkv'); do
   echo "Encoding mkv: ${i}"
-  ffmpeg -n -i "${i}" -map 0:v -map 0:a? -c:v libx264 -crf 24 -preset fast -c:a copy "${i%.*}_[AVC][CRF-24-fast][BD-Encode].mkv"
+  ffmpeg -n -i "${i}" -map 0:v:0 -map 0:a:0? -c:v libx264 -crf 24 -preset fast -c:a libopus -b:a 128K -ac 2 -vbr on -metadata:s:a:0 title="Stereo (Opus ~128kb/s)" "${i%.*}_[AVC][CRF-24-fast][OPUS][BD-Encode].mkv"
 done
