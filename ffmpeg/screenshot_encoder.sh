@@ -5,6 +5,8 @@
 # WARNING: This script will DELETE the riginal files. Make sure you have a backup, otherwise delete line number 16 (rm ${i}) to disable this function. 
 # You can tune the compression level by changing `cq-level=XX`. Lower values have higher quality and higher ones will result in smaller files. I found 35 to achieve a good middle ground for 1920x1080 screenshots. 
 
+# Source for encoding parameters: https://www.reddit.com/r/AV1/comments/o7s8hk/high_quality_encoding_of_avif_images_using/
+
 # magic that allows folders with dots to not cause issues
 IFS='
 '
